@@ -3,12 +3,12 @@ def da_boas_vindas
   puts "Qual seu nome\n"
   nome=gets.strip
   puts="\n"
-  puts "Começaremos o jogo para você, #{nome}"  # concatenando a string nome
+  puts "Começaremos o jogo para você, #{nome}"  
 end
 
 def sorteia_numero_secreto
 puts "Escolhendo um número secreto entre 0 e 200..."
-sorteado=175 # numero_secreto
+sorteado=175 
 puts "Escolhido...que tal adivinhar hoje nosso número secreto? "
 puts "\n"
 sorteado
@@ -21,7 +21,7 @@ def pede_um_numero(chutes,tentativa,limite_de_tentativas)
   puts "Entre com o número"
   chute = gets.strip
   puts "Sera que vc acertou?\n Você chutou #{chute}"
-  chute.to_i # convertendo chute em numero inteiro
+  chute.to_i 
 end
 
 def verifica_se_acertou(numero_secreto, chute)
@@ -40,18 +40,17 @@ def verifica_se_acertou(numero_secreto, chute)
 end
 
 
-da_boas_vindas # chamando a função
+da_boas_vindas
 numero_secreto = sorteia_numero_secreto
 
 limite_de_tentativas = 5
-# criando o array
 chutes = []
 for tentativa in 1..limite_de_tentativas
   chute = pede_um_numero(chutes, tentativa, limite_de_tentativas)
   chutes << chute
 
   if verifica_se_acertou(numero_secreto,chute)
-     break  # ira parar o laço caso o jogador acerte
+     break 
   end
 
 end
