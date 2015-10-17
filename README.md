@@ -1,1 +1,2 @@
-# introdu-o-ao-Ruby
+# Introdução a Linguabem Ruby
+Da Lógica aos jogos 
